@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Proxy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #ffffff 0%, #2481cc 100%);
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 240px;
+            height: 240px;
+            object-fit: contain;
+        }
+
+        .qr-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            transform: scale(0.9);
+        }
+
+        .qr-container:hover {
+            transform: scale(1);
+        }
+
+        .qr-container:active {
+            transform: scale(0.95);
+        }
+
+        .qr-code {
+            width: min(50vw, 50vh);
+            height: min(50vw, 50vh);
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <a href="https://t.me/proxy?server=eb.daniil4jk.ru&port=443&secret=ee9dc0470686be69c88250102cd49f758c7777772e747275737470696c6f742e636f6d"
+           class="qr-container" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            <img src="qr.svg" alt="QR Code" class="qr-code">
+        </a>
+    </div>
+</body>
+</html>
