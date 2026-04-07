@@ -63,9 +63,31 @@
         }
 
         @media (max-width: 480px) {
+            body {
+                justify-content: flex-start;
+                padding-top: max(10vh, 40px);
+            }
+
             .logo {
-                width: 180px;
-                height: 180px;
+                width: 120px;
+                height: 120px;
+            }
+
+            .container {
+                gap: 15px;
+            }
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            @media (max-width: 480px) {
+                body {
+                    padding-top: max(12vh, 50px);
+                }
+
+                .logo {
+                    width: 140px;
+                    height: 140px;
+                }
             }
         }
     </style>
